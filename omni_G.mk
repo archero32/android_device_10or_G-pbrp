@@ -17,10 +17,12 @@
 # Release name
 PRODUCT_RELEASE_NAME := G
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk) 
+
 #$(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/pb/config/common.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8953
